@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager</title>
+ <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    li.completed { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  
+  <form id="taskForm">
+    <input id="title" placeholder="Title" required />
+    <input id="description" placeholder="Description" required />
+    <button class="add" type="submit">Add Task</button>
+  </form>
+  
+  <div class="filter-buttons">
+    <button onclick="fetchTasks()">All</button>
+    <button onclick="fetchTasks('completed')">Completed</button>
+    <button onclick="fetchTasks('pending')">Pending</button>
+  </div>
+  
+  <ul id="taskList"></ul>
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>
